@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Savings.Services.Interface;
 using Savings.Services;
+using MudBlazor.Services;
 
 namespace Savings
 {
@@ -22,6 +23,10 @@ namespace Savings
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
             builder.Services.AddScoped<IUserInteface, UserService>();
+           
+
+            builder.Services.AddMudServices();
+
 #endif
 
             return builder.Build();
